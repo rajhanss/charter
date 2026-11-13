@@ -1,0 +1,7 @@
+{"agent_id": "agent-1", "tool": "read_file", "arguments": {"path": "/data/config.yaml"}, "autonomy_level": "low", "timestamp": "2024-01-15T10:00:00Z"}
+{"agent_id": "agent-1", "tool": "read_database", "arguments": {"table": "events"}, "autonomy_level": "low", "timestamp": "2024-01-15T10:01:00Z"}
+{"agent_id": "agent-2", "tool": "write_file", "arguments": {"path": "/tmp/output.txt"}, "autonomy_level": "medium", "timestamp": "2024-01-15T10:02:00Z"}
+{"agent_id": "agent-2", "tool": "execute_code", "arguments": {"code": "result = 1+1"}, "autonomy_level": "high", "timestamp": "2024-01-15T10:03:00Z"}
+{"agent_id": "agent-1", "tool": "read_file", "arguments": {"path": "/data/report.csv"}, "autonomy_level": "low", "timestamp": "2024-01-15T10:04:00Z"}
+{"agent_id": "agent-3", "tool": "write_config", "arguments": {"key": "log_level", "value": "debug"}, "autonomy_level": "low", "timestamp": "2024-01-15T10:05:00Z"}
+{"agent_id": "agent-3", "tool": "read_logs", "arguments": {"lines": 100}, "autonomy_level": "low", "timestamp": "2024-01-15T10:06:00Z"}

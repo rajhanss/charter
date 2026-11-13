@@ -1,0 +1,69 @@
+- id: "euaia-art-9"
+  framework: "EU AI Act"
+  reference: "Article 9"
+  title: "Risk management system"
+  description: "Establish and maintain a risk management system that identifies, analyzes, estimates and evaluates risks associated with the AI system and that adopts appropriate risk management measures."
+  technical_controls:
+    - "policy_enforcement"
+    - "decision_logging"
+  evidence_queries:
+    - type: "ledger_count"
+      filter:
+        decision: "deny"
+      min_count: 1
+      description: "Denied actions in the ledger demonstrate active risk control."
+
+- id: "euaia-art-12"
+  framework: "EU AI Act"
+  reference: "Article 12"
+  title: "Record-keeping and logging"
+  description: "High-risk AI systems shall technically allow for the automatic recording of events throughout the system lifecycle."
+  technical_controls:
+    - "decision_logging"
+  evidence_queries:
+    - type: "ledger_count"
+      filter: {}
+      min_count: 1
+      description: "Any ledger record demonstrates that logging is active."
+
+- id: "euaia-art-13"
+  framework: "EU AI Act"
+  reference: "Article 13"
+  title: "Transparency and provision of information to deployers"
+  description: "High-risk AI systems shall be designed and developed so as to ensure that their operation is sufficiently transparent to enable deployers to interpret the system's output and use it appropriately."
+  technical_controls:
+    - "decision_explanation"
+  evidence_queries:
+    - type: "ledger_count"
+      filter: {}
+      min_count: 1
+      description: "Ledger records with reason fields provide transparency of decisions."
+
+- id: "euaia-art-14"
+  framework: "EU AI Act"
+  reference: "Article 14"
+  title: "Human oversight"
+  description: "High-risk AI systems shall be designed and developed so that they can be effectively overseen by natural persons, including the ability to intervene and override decisions."
+  technical_controls:
+    - "human_approval"
+    - "policy_enforcement"
+  evidence_queries:
+    - type: "ledger_count"
+      filter:
+        decision: "require_approval"
+      min_count: 1
+      description: "Approval-required decisions demonstrate human oversight capability."
+
+- id: "euaia-art-15"
+  framework: "EU AI Act"
+  reference: "Article 15"
+  title: "Accuracy, robustness and cybersecurity"
+  description: "High-risk AI systems shall be designed and developed so as to achieve an appropriate level of accuracy, robustness and cybersecurity, and to perform consistently in those respects throughout their lifecycle."
+  technical_controls:
+    - "ledger_integrity"
+    - "policy_enforcement"
+  evidence_queries:
+    - type: "ledger_count"
+      filter: {}
+      min_count: 1
+      description: "A verifiable ledger with signed checkpoints demonstrates integrity controls."

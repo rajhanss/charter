@@ -1,0 +1,56 @@
+- id: "iso42001-6-1"
+  framework: "ISO/IEC 42001"
+  reference: "Clause 6.1"
+  title: "Actions to address risks and opportunities"
+  description: "Actions are taken to address risks and opportunities related to the AI management system."
+  technical_controls:
+    - "policy_enforcement"
+    - "decision_logging"
+  evidence_queries:
+    - type: "ledger_count"
+      filter:
+        decision: "deny"
+      min_count: 1
+      description: "Denied actions demonstrate active risk response measures."
+
+- id: "iso42001-8-4"
+  framework: "ISO/IEC 42001"
+  reference: "Clause 8.4"
+  title: "AI system impact assessment"
+  description: "The organization assesses the impact of AI systems on individuals and society."
+  technical_controls:
+    - "decision_logging"
+    - "decision_explanation"
+  evidence_queries:
+    - type: "ledger_count"
+      filter: {}
+      min_count: 1
+      description: "Logged decisions with reasons support impact traceability."
+
+- id: "iso42001-9-1"
+  framework: "ISO/IEC 42001"
+  reference: "Clause 9.1"
+  title: "Monitoring, measurement, analysis and evaluation"
+  description: "The organization monitors and measures the AI management system's performance."
+  technical_controls:
+    - "ledger_integrity"
+  evidence_queries:
+    - type: "ledger_count"
+      filter: {}
+      min_count: 1
+      description: "A verifiable ledger enables performance monitoring and audit."
+
+- id: "iso42001-10-2"
+  framework: "ISO/IEC 42001"
+  reference: "Clause 10.2"
+  title: "Nonconformity and corrective action"
+  description: "Nonconformities are identified and corrective actions are taken."
+  technical_controls:
+    - "ledger_integrity"
+    - "policy_enforcement"
+  evidence_queries:
+    - type: "ledger_count"
+      filter:
+        decision: "deny"
+      min_count: 1
+      description: "Deny records identify nonconforming actions for review."

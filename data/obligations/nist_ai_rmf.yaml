@@ -1,0 +1,53 @@
+- id: "nist-gv-1-1"
+  framework: "NIST AI RMF"
+  reference: "GOVERN 1.1"
+  title: "Policies and accountability"
+  description: "Policies, processes, procedures and practices for AI risk management are established, documented, and communicated."
+  technical_controls:
+    - "policy_enforcement"
+  evidence_queries:
+    - type: "ledger_count"
+      filter: {}
+      min_count: 1
+      description: "Policy decisions logged in the ledger show that an AI policy is active."
+
+- id: "nist-gv-4-1"
+  framework: "NIST AI RMF"
+  reference: "GOVERN 4.1"
+  title: "Organizational risk tolerance"
+  description: "Organizational risk tolerance for AI is communicated and applied."
+  technical_controls:
+    - "policy_enforcement"
+  evidence_queries:
+    - type: "ledger_count"
+      filter:
+        decision: "deny"
+      min_count: 1
+      description: "Denied actions show that risk limits are enforced."
+
+- id: "nist-ms-2-5"
+  framework: "NIST AI RMF"
+  reference: "MEASURE 2.5"
+  title: "AI system functioning and behavior"
+  description: "AI system functionality and behavior are evaluated against defined metrics."
+  technical_controls:
+    - "decision_logging"
+  evidence_queries:
+    - type: "ledger_count"
+      filter: {}
+      min_count: 5
+      description: "Multiple logged decisions provide a basis for behavioral analysis."
+
+- id: "nist-mg-2-2"
+  framework: "NIST AI RMF"
+  reference: "MANAGE 2.2"
+  title: "Human interventions and override"
+  description: "Mechanisms exist to allow human intervention in AI operation."
+  technical_controls:
+    - "human_approval"
+  evidence_queries:
+    - type: "ledger_count"
+      filter:
+        decision: "require_approval"
+      min_count: 1
+      description: "Approval-required decisions demonstrate human intervention capability."
